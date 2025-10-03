@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Plataforma para ONGs - projetos sociais, voluntariado e doações." />
+  <title>Minha ONG - Plataforma Social</title>
+
+  <!-- SEO básico -->
+  <meta name="keywords" content="ONG, voluntariado, doações, projetos sociais" />
+  <meta name="author" content="Keiner Mendoza" />
+
+
+  <!-- CSS Global -->
+  <link rel="stylesheet" href="/css/style.css" />
+  
+</head>
+<body>
+  <!-- Cabeçalho principal -->
+  <header role="banner" class="site-header">
+    <nav class="navbar" role="navigation" aria-label="Menu principal">
+      <a href="index.html" class="logo">Minha ONG</a>
+      <button id="button-menu-toggle" class="menu-toggle" aria-label="Abrir menu">☰</button>
+      <ul id="navigation-menu" class="menu">
+        <li><a href="sobre.html">Sobre</a></li>
+        <li><a href="projetos.html">Projetos</a></li>
+        <li><a href="voluntariado.html">Voluntariado</a></li>
+        <li><a href="doacoes.html">Doações</a></li>
+        <li><a href="transparencia.html">Transparência</a></li>
+        <li><a href="contato.html" aria-current="page">Contato</a></li>
+        <li><a href="blog.html">Blog</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Conteúdo principal -->
+ <main role="main" class="content">
+  <!-- Hero -->
+  <section class="hero">
+    <h1>Contato</h1>
+    <p>
+      Entre em contato conosco para tirar dúvidas, enviar sugestões ou iniciar
+      uma parceria. Estamos prontos para ouvir você!
+    </p>
+  </section>
+
+  <!-- Formulário de contato -->
+  <section class="section">
+    <h2>Fale Conosco</h2>
+    <form action="#" method="post" class="contact-form">
+      <div class="form-group">
+        <label for="nome">Nome completo</label>
+        <input type="text" id="nome" name="nome" required placeholder="Digite seu nome" />
+      </div>
+
+      <div class="form-group">
+        <label for="email">E-mail</label>
+        <input type="email" id="email" name="email" required placeholder="seuemail@exemplo.com" />
+      </div>
+
+      <div class="form-group">
+        <label for="telefone">Telefone</label>
+        <input type="tel" id="telefone" name="telefone" placeholder="(00) 00000-0000" />
+      </div>
+
+      <div class="form-group">
+        <label for="assunto">Assunto</label>
+        <select id="assunto" name="assunto" required>
+          <option value="">Selecione uma opção</option>
+          <option value="duvida">Dúvida</option>
+          <option value="parceria">Parceria</option>
+          <option value="voluntariado">Voluntariado</option>
+          <option value="outros">Outros</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="mensagem">Mensagem</label>
+        <textarea id="mensagem" name="mensagem" rows="6" required placeholder="Escreva sua mensagem"></textarea>
+      </div>
+
+      <button type="submit" class="btn btn-primary">Enviar Mensagem</button>
+    </form>
+
+  </section>
+
+  <!-- Informações adicionais -->
+  <section class="section">
+    <h2>Outros Canais</h2>
+    <ul class="contact-info">
+      <li><strong>Email:</strong> contato@ongexemplo.org</li>
+      <li><strong>Telefone:</strong> (11) 1234-5678</li>
+      <li><strong>Endereço:</strong> Rua Exemplo, 123 - São Paulo, SP</li>
+    </ul>
+  </section>
+
+  <!-- Mapa -->
+  <section class="section">
+    <h2>Como Chegar</h2>
+    <div class="map-container">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3656.9739778294286!2d-46.65657408502273!3d-23.57553396720544!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce59c5e09fbb0f%3A0x2dbb3e73c7c8e12c!2sPaulista%20Avenue!5e0!3m2!1sen!2sbr!4v1694720000000"
+        width="100%"
+        height="350"
+        style="border:0;"
+        allowfullscreen=""
+        loading="lazy">
+      </iframe>
+    </div>
+  </section>
+</main>
+
+
+  <!-- Rodapé -->
+  <footer role="contentinfo" class="site-footer">
+    <section>
+      <h2>Contato</h2>
+      <address>
+        Rua Exemplo, 123 - São Paulo, SP <br />
+        <a href="mailto:contato@minhaong.org">contato@minhaong.org</a>
+      </address>
+    </section>
+
+    <section>
+      <h2>Siga-nos</h2>
+      <ul class="social-links">
+        <li><a href="#">Facebook</a></li>
+        <li><a href="#">Instagram</a></li>
+        <li><a href="#">YouTube</a></li>
+      </ul>
+    </section>
+
+    <p>© 2025 Minha ONG. Desenvolvido por Keiner Mendoza. Todos os direitos reservados.</p>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/action.js"></script>
+</body>
+</html>

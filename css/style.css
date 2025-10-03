@@ -1,0 +1,359 @@
+/*
+|--------------------------------------------------------------------------
+| 1. Variables y Reset Básico
+|--------------------------------------------------------------------------
+*/
+:root {
+  /* Paleta de Colores */
+  --color-primary: #007bff;
+  --color-secondary: #28a745;
+  --color-accent: #ffc107;
+  --color-dark: #343a40;
+  --color-light: #f8f9fa;
+  --color-white: #ffffff;
+
+  /* Tipografía */
+  --font-body: 'Arial', sans-serif;
+  --font-heading: 'Helvetica Neue', sans-serif;
+  --font-size-base: 16px;
+
+  /* Espaciado */
+  --spacing-unit: 1rem;
+  --border-radius: 0.3rem;
+  --header-height: 60px; /* Altura fija para el header móvil */
+}
+
+/* Reset y estilos base */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-body);
+  font-size: var(--font-size-base);
+  line-height: 1.6;
+  color: var(--color-dark);
+  background-color: var(--color-light);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+a {
+  text-decoration: none;
+  color: var(--color-primary);
+  transition: color 0.3s;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+h1, h2, h3 {
+  font-family: var(--font-heading);
+  color: var(--color-dark);
+  margin-bottom: var(--spacing-unit);
+}
+
+/*
+|--------------------------------------------------------------------------
+| 2. Layout Estructural y Tipografía (Mobile Default)
+|--------------------------------------------------------------------------
+*/
+.content {
+  flex: 1;
+  padding-top: var(--header-height); /* Espacio para el header fijo */
+}
+
+.section {
+  padding: 2rem var(--spacing-unit); /* Menos padding en móvil */
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+h1 {
+    font-size: 2rem;
+}
+
+h2 {
+    font-size: 1.5rem;
+}
+
+/*
+|--------------------------------------------------------------------------
+| 3. Header y Navegación (Mobile Default)
+|--------------------------------------------------------------------------
+*/
+.site-header {
+  background-color: var(--color-white);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  position: fixed; /* Fixed header para móvil */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: var(--header-height);
+  z-index: 1000;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 var(--spacing-unit);
+  height: 100%;
+}
+
+.logo {
+  font-family: var(--font-heading);
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: var(--color-primary);
+  /* Para anular el underline al ser el logo */
+  text-decoration: none !important; 
+}
+
+/* Menú Toggle Button (Visible en móvil) */
+.menu-toggle {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  padding: 0.5rem;
+  color: var(--color-dark);
+  display: block; 
+}
+
+/* Menú Principal (Oculto en móvil por defecto, se mostraría con JS) */
+.menu {
+  list-style: none;
+  display: none; /* Ocultar en móvil */
+  flex-direction: column;
+  position: absolute;
+  top: var(--header-height); 
+  left: 0;
+  width: 100%;
+  background-color: var(--color-white);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  z-index: 999;
+}
+
+/* Clase que se agregaría con JavaScript para mostrar el menú */
+.menu.is-open { display: flex; }
+
+.menu li {
+  border-bottom: 1px solid #eee;
+}
+
+.menu a {
+  display: block;
+  padding: 1rem 1.5rem;
+  color: var(--color-dark);
+  text-align: center;
+}
+
+.menu a:hover,
+.menu a[aria-current="page"]
+{
+  background-color: var(--color-light);
+  color: var(--color-primary);
+  text-decoration: none;
+}
+
+/*
+|--------------------------------------------------------------------------
+| 4. Héroe y Botones (Mobile Default)
+|--------------------------------------------------------------------------
+*/
+.hero {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  text-align: center;
+  padding: 3rem var(--spacing-unit);
+}
+
+.hero h1 {
+  color: var(--color-white);
+  font-size: 2rem;
+}
+
+.hero p {
+  font-size: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.btn {
+  display: block; /* Ocupa todo el ancho en móvil */
+  padding: 0.75rem 1.5rem;
+  border-radius: var(--border-radius);
+  font-weight: bold;
+  text-align: center;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.1s ease;
+  text-decoration: none;
+  margin-top: 1rem;
+}
+
+.btn-primary {
+  background-color: var(--color-accent);
+  color: var(--color-dark);
+  border: 2px solid var(--color-accent);
+}
+
+.btn-primary:hover {
+  background-color: #ffda6a;
+  border-color: #ffda6a;
+}
+
+/*
+|--------------------------------------------------------------------------
+| 5. Rodapé (Footer) (Mobile Default)
+|--------------------------------------------------------------------------
+*/
+.site-footer {
+  background-color: var(--color-dark);
+  color: var(--color-light);
+  padding: 2rem var(--spacing-unit);
+  text-align: center;
+}
+
+.site-footer section {
+  margin-bottom: 1.5rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.site-footer h2 {
+  color: var(--color-accent);
+  margin-bottom: 0.75rem;
+  font-size: 1.2rem;
+}
+
+.site-footer address {
+    font-style: normal;
+}
+
+.site-footer a {
+  color: var(--color-light);
+}
+
+.social-links {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+
+/*
+|--------------------------------------------------------------------------
+| 6. Media Query (Desktop - Mejoras progresivas)
+|--------------------------------------------------------------------------
+*/
+@media (min-width: 768px) {
+  
+  /* Layout y Tipografía */
+  .content {
+    padding-top: 0; /* No necesitamos padding en main porque el header no es fixed */
+  }
+
+  .section {
+    padding: 4rem var(--spacing-unit); /* Más padding en escritorio */
+  }
+
+  h1 {
+      font-size: 3rem;
+  }
+  
+  h2 {
+      font-size: 2rem;
+  }
+
+  /* Header y Navegación */
+  .site-header {
+    position: sticky; /* Sticky header para mejor UX */
+    height: auto;
+  }
+
+  .navbar {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: var(--spacing-unit);
+  }
+
+  /* Mostrar Menú y Ocultar Toggle */
+  .menu-toggle {
+    display: none; /* Ocultar el botón */
+  }
+
+  .menu {
+    display: flex; /* Mostrar como fila */
+    flex-direction: row;
+    position: static;
+    width: auto;
+    box-shadow: none;
+    background-color: transparent;
+  }
+  
+  .menu li {
+    border-bottom: none;
+  }
+
+  .menu a {
+    padding: 0.5rem 0;
+    margin-left: 1.5rem;
+    text-align: left;
+  }
+
+  /* Héroe y Botones */
+  .hero {
+    padding: 5rem var(--spacing-unit);
+  }
+  
+  .hero p {
+      font-size: 1.25rem;
+  }
+
+  .btn {
+    display: inline-block; /* Vuelve a ser inline en escritorio */
+    width: auto;
+  }
+
+  /* Footer */
+  .site-footer {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    text-align: left;
+    padding: 3rem 5%;
+  }
+  
+  .site-footer section {
+      flex: 1;
+      max-width: 300px;
+      margin-bottom: 0;
+      border-bottom: none;
+  }
+  
+  .social-links {
+      justify-content: flex-start;
+  }
+  
+  .site-footer p {
+      width: 100%;
+      text-align: center;
+      margin-top: 2rem;
+      padding-top: 1rem;
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+  }
+}
+
+
+form { margin-bottom: 40px; padding: 20px; border: 1px solid #ccc; border-radius: 8px; }
+fieldset { margin-bottom: 15px; padding: 10px; }
+legend { font-weight: bold; }
+label { display: block; margin-top: 8px; }
+input, select, textarea { width: 100%; padding: 6px; margin-top: 4px; }
+button { margin-top: 12px; padding: 8px 16px; }

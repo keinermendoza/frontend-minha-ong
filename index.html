@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <!-- SEO básico -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Plataforma para ONGs - projetos sociais, voluntariado e doações." />
+  <title>Minha ONG - Plataforma Social</title>
+
+  <meta name="keywords" content="ONG, voluntariado, doações, projetos sociais" />
+  <meta name="author" content="Keiner Mendoza" />
+  <link rel="canonical" href="https://frontend-minha-ong.vercel.app/"/>
+  <meta name="title" content="Minha ONG - Plataforma Social">
+  <meta name="description" content="Plataforma para ONGs - projetos sociais, voluntariado e doações.">
+
+  <!-- Facebook / Whatsapp -->
+  <meta property="og:image" content="/assets/img/preview.jpg" />
+  <meta property="og:title" content="Minha ONG - Plataforma Social">
+  <meta property="og:description" content="Plataforma para ONGs - projetos sociais, voluntariado e doações.">
+  <meta property="og:site_name" content="keiner-mendoza-web-developer">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://frontend-minha-ong.vercel.app/">
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="https://frontend-minha-ong.vercel.app/">
+  <meta property="twitter:title" content="Minha ONG - Plataforma Social">
+  <meta property="twitter:description" content="Plataforma para ONGs - projetos sociais, voluntariado e doações.">
+  <meta property="twitter:image" content="/assets/img/preview.jpg">
+
+  <!-- favicons -->
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/icons/apple-touch-icon.png"/>
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/icons/favicon-32x32.png"/>
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/icons/favicon-16x16.png"/>
+  <link rel="icon" type="image/png" sizes="192x192" href="/assets/icons/android-chrome-192x192.png"/>
+  <link rel="icon" type="image/png" sizes="512x512" href="/assets/icons/android-chrome-512x512.png"/>
+  <link rel="icon" href="/assets/icons/favicon.ico" type="image/x-icon">
+  <link rel="manifest" href="/assets/icons/site.webmanifest">
+
+  <!-- CSS Global -->
+  <link rel="stylesheet" href="/css/style.css" />
+  
+</head>
+<body>
+  <!-- Cabeçalho principal -->
+  <header role="banner" class="site-header">
+    <nav class="navbar" role="navigation" aria-label="Menu principal">
+      <a href="index.html" aria-current="page" class="logo">Minha ONG</a>
+      <button id="button-menu-toggle" class="menu-toggle" aria-label="Abrir menu">☰</button>
+      <ul id="navigation-menu" class="menu">
+        <li><a href="sobre.html">Sobre</a></li>
+        <li><a href="projetos.html">Projetos</a></li>
+        <li><a href="voluntariado.html">Voluntariado</a></li>
+        <li><a href="doacoes.html">Doações</a></li>
+        <li><a href="transparencia.html">Transparência</a></li>
+        <li><a href="contato.html">Contato</a></li>
+        <li><a href="blog.html">Blog</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Conteúdo principal -->
+  <main role="main" class="content">
+    <!-- Título da página -->
+    <section class="hero">
+      <h1>Título da Página</h1>
+      <p>Subtítulo ou chamada para ação.</p>
+      <a href="doacoes.html" class="btn btn-primary">Doe Agora</a>
+    </section>
+
+    <!-- Conteúdo dinâmico -->
+    <section class="section">
+      <h2>Seção de Conteúdo</h2>
+      <p>Aqui vai o conteúdo específico de cada página.</p>
+    </section>
+
+    <!-- Exemplo de multimídia -->
+    <section class="section">
+      <h2>Depoimento</h2>
+      <audio controls>
+        <source src="audio/depoimento.mp3" type="audio/mpeg" />
+        Seu navegador não suporta áudio.
+      </audio>
+    </section>
+
+    <section class="section">
+      <!-- Newsletter -->
+      <form>
+        <h2>Inscrição na Newsletter</h2>
+        <fieldset>
+          <legend>Preferências</legend>
+          <label>E-mail:
+            <input type="email" name="email" required>
+          </label>
+          <label>Preferências de Conteúdo:</label>
+          <label><input type="checkbox" name="conteudo" value="projetos"> Projetos</label>
+          <label><input type="checkbox" name="conteudo" value="eventos"> Eventos</label>
+          <label><input type="checkbox" name="conteudo" value="resultados"> Resultados</label>
+        </fieldset>
+        <button type="submit">Inscrever-se</button>
+      </form>
+    </section>
+
+  </main>
+
+  <!-- Rodapé -->
+  <footer role="contentinfo" class="site-footer">
+    <section>
+      <h2>Contato</h2>
+      <address>
+        Rua Exemplo, 123 - São Paulo, SP <br />
+        <a href="mailto:contato@minhaong.org">contato@minhaong.org</a>
+      </address>
+    </section>
+
+    <section>
+      <h2>Siga-nos</h2>
+      <ul class="social-links">
+        <li><a href="#">Facebook</a></li>
+        <li><a href="#">Instagram</a></li>
+        <li><a href="#">YouTube</a></li>
+      </ul>
+    </section>
+    <p>© 2025 Minha ONG. Desenvolvido por Keiner Mendoza. Todos os direitos reservados.</p>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/action.js"></script>
+</body>
+</html>
